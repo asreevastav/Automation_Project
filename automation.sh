@@ -2,7 +2,7 @@
 
 # Variables
 name="parul"
-s3_bucket="upgrad-parul123"
+s3_bucket="upgradanirudhtask1"
 
 # update the ubuntu repositories
 apt update -y
@@ -37,7 +37,7 @@ tar -cf /tmp/${name}-httpd-logs-${timestamp}.tar *.log
 # copy logs to s3 bucket
 if [[ -f /tmp/${name}-httpd-logs-${timestamp}.tar ]]; then
 	#statements
-	aws cp /tmp/${name}-httpd-logs-${timestamp}.tar s3://${s3_bucket}/${name}-httpd-logs-${timestamp}.tar
+	aws s3 cp /tmp/${name}-httpd-logs-${timestamp}.tar s3://${s3_bucket}/${name}-httpd-logs-${timestamp}.tar
 fi
 
 docroot="/var/www/html"
