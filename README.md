@@ -1,2 +1,2 @@
 # Automation_Project
-automation script
+It contains automation script that installs apache2.
